@@ -1,0 +1,89 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 31px 0;
+  box-shadow: 0px 4px 10px rgba(79, 79, 79, 0.07);
+  min-height: 100vh;
+  row-gap: 2rem;
+
+  button {
+    background: #27ae60;
+    border-radius: 30px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    letter-spacing: 0.2px;
+
+    color: #ffffff;
+    padding: 9px 26px;
+    margin: 0 33px;
+  }
+
+  &_nav {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      font-family: 'Segoe UI';
+      font-size: 14px;
+      line-height: 35px;
+      text-transform: capitalize;
+      color: #647787;
+      font-weight: 400;
+      padding: 12px 33px;
+    }
+  }
+
+  &_navlinks {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  &_links {
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: 400;
+    color: #647787;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    padding: 12px 33px;
+    transition: all 1s ease;
+
+    &:hover {
+      background: #1876f036;
+    }
+  }
+
+  &_linksActive {
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: 400;
+    color: #647787;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    background: #1876f036;
+    padding: 12px 33px;
+    position: relative;
+    transition: all 1s ease;
+
+    &::after {
+      content: '';
+      height: 100%;
+      width: 4px;
+      background: #1875f0;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
