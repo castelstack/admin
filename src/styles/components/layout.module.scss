@@ -8,3 +8,17 @@
     background: #F7F8FA;
 }
 
+
+@media only screen  and (max-width: 1250px) {
+    .children{
+        padding: 18px;
+        background: #F7F8FA;
+    }
+}
+
+@media only screen  and (max-width: 1150px) {
+    .children{
+        padding: 15px;
+        background: #F7F8FA;
+    }
+}

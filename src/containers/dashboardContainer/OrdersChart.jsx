@@ -1,8 +1,4 @@
-import {
-  AreaChart,
-  Area,
-  ResponsiveContainer,
-} from 'recharts';
+import { AreaChart, Area, ResponsiveContainer } from 'recharts';
 
 import styles from 'styles/pages/dashboard.module.scss';
 
@@ -75,26 +71,28 @@ const data = [
 
 const ChartBox = () => {
   return (
-    <ResponsiveContainer width='100%' height={200}>
-      <AreaChart
-        width={200}
-        height={60}
-        data={data}
-        margin={{
-          top: 5,
-          right: 0,
-          left: 0,
-          bottom: 5,
-        }}
-      >
-        <Area
-          type='monotone'
-          dataKey='uv'
-          stroke='#0294FF'
-          fill='rgba(2, 148, 255, 0.126274)'
-        />
-      </AreaChart>
-    </ResponsiveContainer>
+    <div style={{ width: '100%'}}>
+      <ResponsiveContainer width='100%' height={200}>
+        <AreaChart
+          width={200}
+          height={60}
+          data={data}
+          margin={{
+            top: 5,
+            right: 0,
+            left: 0,
+            bottom: 5,
+          }}
+        >
+          <Area
+            type='monotone'
+            dataKey='uv'
+            stroke='#0294FF'
+            fill='rgba(2, 148, 255, 0.126274)'
+          />
+        </AreaChart>
+      </ResponsiveContainer>
+    </div>
   );
 };
 

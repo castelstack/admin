@@ -1,9 +1,5 @@
-
-import {
-  AreaChart,
-  Area,
-  ResponsiveContainer,
-} from 'recharts';
+import { AreaChart, Area, ResponsiveContainer } from 'recharts';
+import useSize from 'utils/useSize';
 
 const data = [
   {
@@ -51,8 +47,10 @@ const data = [
 ];
 
 export const ChartBox = () => {
+  const { width } = useSize();
   return (
-    <ResponsiveContainer width={100} height={88}>
+    <div style={{ maxWidth: '100%' }}>
+    <ResponsiveContainer width={width < 920 ? '100%' : 100} height={88}>
       <AreaChart
         width={200}
         height={60}
@@ -64,8 +62,14 @@ export const ChartBox = () => {
           bottom: 5,
         }}
       >
-        <Area type='monotone' dataKey='uv' stroke='#0294FF' fill='rgba(2, 148, 255, 0.126274)' />
+        <Area
+          type='monotone'
+          dataKey='uv'
+          stroke='#0294FF'
+          fill='rgba(2, 148, 255, 0.126274)'
+        />
       </AreaChart>
     </ResponsiveContainer>
+    </div>
   );
 };

@@ -2,3 +2,10 @@
     max-height: 29px;
     max-width: 153px;
 }
+
+@media only screen  and (max-width: 755px) {
+    .logo{
+        max-height: 20px;
+        max-width: 103px;
+    }
+  }

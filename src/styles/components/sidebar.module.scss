@@ -1,4 +1,4 @@
-.sidebar {
+.sidebar,.sidebarmobile {
   display: flex;
   flex-direction: column;
   padding: 31px 0;
@@ -86,4 +86,84 @@
       left: 0;
     }
   }
+}
+
+.sidebarmobile{
+  display: none;
+}
+
+@media only screen and (max-width: 1150px) {
+  .sidebar {
+    padding: 31px 0;
+
+    button {
+      padding: 9px 20px;
+    }
+
+    &_nav {
+      h2 {
+        padding: 12px 20px;
+      }
+    }
+
+    &_links {
+      padding: 12px 20px;
+    }
+
+    &_linksActive {
+      padding: 12px 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1121px) {
+
+    .sidebar {
+        padding: 8px ;}
+ .linkshide >span{
+    display: none;
+    padding: 12px 20px;
+ }
+ .sidebar{
+    button{
+
+        display: none;
+    }
+ }
+
+.sidebar{
+
+    &_nav {
+       h2{
+           display: none;
+        }
+    }
+}
+}
+
+
+@media only screen and (max-width: 915px) {
+
+  .sidebar{
+
+   display: none;
+}
+.sidebarmobile{
+  display: flex;
+  padding: 0 15px;
+  button{
+
+    display: none;
+ }
+}
+
+.bttn{
+  display: flex;
+  width: 20px;
+ height: 20px;
+ margin-top: 1rem;
+ align-self: flex-end;
+}
+
+
 }

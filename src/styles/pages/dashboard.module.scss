@@ -12,6 +12,7 @@
 
 .statBox {
   display: flex;
+  // flex-wrap: wrap;
   align-items: center;
   column-gap: 10px;
   background: #ffffff;
@@ -178,4 +179,87 @@
       line-height: 16px;
     }
   }
+}
+
+
+@media only screen  and (max-width: 1250px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+    .orders {
+        padding: 33px;
+        background-color: #fff;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+}
+@media only screen  and (max-width: 1140px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+    .orders {
+        padding: 33px;
+        background-color: #fff;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+}
+@media only screen  and (max-width: 919px) {
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+      .orders {
+        grid-template-columns: 1fr ;
+      }
+      .statBox {
+        display: grid;
+        grid-template-columns: 1fr;
+        }
+}
+@media only screen  and (max-width: 888px) {
+    .statBox {
+        display: grid;
+        grid-template-columns: 1fr;
+        }
+}
+
+
+@media only screen  and (max-width: 755px) {
+  .stats, .orders {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+  }
+
+
+
+}
+@media only screen  and (max-width: 485px) {
+  .stats,.orders {
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 1rem;
+    width: 100%;
+  }
+  .orderchart_tab{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+row-gap: 1rem;  }
+
 }
